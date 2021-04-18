@@ -25,6 +25,7 @@ class Extension {
   constructor() {
     this.appId = '';
     this.windows = [];
+    this.windowsHash = 0;
     this.windowIndex = 0;
 
     this.settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.alternate-switch-to-application');
@@ -74,11 +75,16 @@ class Extension {
     // application, or start a new instance if the application has no windows.
 
     const appId = app.get_id();
+    const windowsHash = windows.map(w => w.get_id()).reduce((x, y) => x^y, 0);
     // If the last active app was another one or if the window list has been
-    // updated (approximated by length, HACK).
-    if (this.appId != appId || this.windows.length != windows.length) {
+    // updated, update our state.
+    if (this.appId != appId ||
+      this.windows.length != windows.length ||
+      this.windowsHash != windowsHash
+    ) {
       this.appId = appId;
       this.windows = windows;
+      this.windowsHash = windowsHash;
       this.windowIndex = 0;
     }
 
