@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema path="/org/gnome/shell/extensions/alternate-switch-to-application/" id="org.gnome.shell.extensions.alternate-switch-to-application">
+    <key name="switch-to-application-window-1" type="as">
+      <default><![CDATA[['<Super>1']]]></default>
+      <summary>Switch to application 1</summary>
+      <description>
+        Switch to the first application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-2" type="as">
+      <default><![CDATA[['<Super>2']]]></default>
+      <summary>Switch to application 2</summary>
+      <description>
+        Switch to the second application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-3" type="as">
+      <default><![CDATA[['<Super>3']]]></default>
+      <summary>Switch to application 3</summary>
+      <description>
+        Switch to the third application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-4" type="as">
+      <default><![CDATA[['<Super>4']]]></default>
+      <summary>Switch to application 4</summary>
+      <description>
+        Switch to the fourth application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-5" type="as">
+      <default><![CDATA[['<Super>5']]]></default>
+      <summary>Switch to application 5</summary>
+      <description>
+        Switch to the fifth application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-6" type="as">
+      <default><![CDATA[['<Super>6']]]></default>
+      <summary>Switch to application 6</summary>
+      <description>
+        Switch to the sixth application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-7" type="as">
+      <default><![CDATA[['<Super>7']]]></default>
+      <summary>Switch to application 7</summary>
+      <description>
+        Switch to the seventh application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-8" type="as">
+      <default><![CDATA[['<Super>8']]]></default>
+      <summary>Switch to application 8</summary>
+      <description>
+        Switch to the eigth application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-9" type="as">
+      <default><![CDATA[['<Super>9']]]></default>
+      <summary>Switch to application 9</summary>
+      <description>
+        Switch to the ninth application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+    <key name="switch-to-application-window-10" type="as">
+      <default><![CDATA[['<Super>0']]]></default>
+      <summary>Switch to application 10</summary>
+      <description>
+        Switch to the tenth application in the dash, or cycle between its
+        windows if it is already active.
+      </description>
+    </key>
+  </schema>
+</schemalist>
