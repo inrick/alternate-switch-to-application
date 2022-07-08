@@ -3,6 +3,6 @@
   "description": "Alternate implementation of switch to application that switches between the application instance's windows instead of activating all of them.",
   "uuid": "alternate-switch-to-application@inrick.github.io",
   "shell-version": [
-    "40"
+    "42", "40"
   ]
 }
