@@ -1,12 +1,11 @@
 'use strict';
 
-const ExtensionUtils = imports.misc.extensionUtils;
-const Me = ExtensionUtils.getCurrentExtension();
+import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-const Gio = imports.gi.Gio;
-const Main = imports.ui.main;
-const Meta = imports.gi.Meta;
-const Shell = imports.gi.Shell;
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import Gio from 'gi://Gio';
+import Meta from 'gi://Meta';
+import Shell from 'gi://Shell';
 
 const KEYBINDINGS = [
   'switch-to-application-window-1',
@@ -21,23 +20,25 @@ const KEYBINDINGS = [
   'switch-to-application-window-10',
 ];
 
-class Extension {
-  constructor() {
+export default class AlternateSwitchToApplicationExtension extends Extension {
+  constructor(metadata) {
+    super(metadata);
+
     this.appId = '';
     this.windows = [];
     this.windowsHash = 0;
     this.windowIndex = 0;
 
-    this.settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.alternate-switch-to-application');
+    this.settings = this.getSettings('org.gnome.shell.extensions.alternate-switch-to-application');
   }
 
   enable() {
-    log(`Enabling ${Me.metadata.name}`);
+    log(`Enabling ${this.metadata.name}`);
     this._addKeybindings();
   }
 
   disable() {
-    log(`Disabling ${Me.metadata.name}`);
+    log(`Disabling ${this.metadata.name}`);
     this._removeKeybindings();
   }
 
@@ -100,8 +101,4 @@ class Extension {
 
     Main.activateWindow(this.windows[this.windowIndex]);
   }
-}
-
-function init() {
-  return new Extension();
 }

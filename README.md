@@ -2,7 +2,7 @@ Alternate Switch To Application
 ===============================
 
 GNOME Shell extension that offers an alternate implementation of "switch to
-application". Works with GNOME 40. It cycles through the application's windows
+application". Works with GNOME 46. It cycles through the application's windows
 instead of activating all of them at once. If the application does not have any
 windows, a new instance is started.
 
