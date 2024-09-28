@@ -1,10 +1,15 @@
 Alternate Switch To Application
 ===============================
 
-GNOME Shell extension that offers an alternate implementation of "switch to
-application". Works with GNOME 46. It cycles through the application's windows
-instead of activating all of them at once. If the application does not have any
-windows, a new instance is started.
+This GNOME Shell extension offers an alternate implementation of "switch to
+application". It cycles through the application's windows instead of activating
+all of them at once (much like the difference between GNOME's own
+`switch-applications` and `switch-windows`). If the application does not have
+any windows, a new instance is started.
+
+By default, the keybinding is `<Super>1`, ..., `<Super>9`, `<Super>0` to
+activate the next window (or start the application) of application 1 to 10. See
+the XML file in the schemas subdirectory.
 
 Before enabling the extension, make sure to disable the default switch to
 application bindings:
